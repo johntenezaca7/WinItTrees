@@ -5,21 +5,22 @@ const getDistance = (x1, x2, y1, y2) => {
 const compareTwoPoints = (arrayOfObj, lat1, lng1) => {
   var smallestDistance = Number.POSITIVE_INFINITY;
   var insideArray;
-  var eachObj, lat2, lng2;
+  var eachObj, lat2, lng2, calc;
 
   for (var i = 0; i < arrayOfObj.length; i++) {
     eachObj = arrayOfObj[i];
 
-    lat2 = parseInt(eachObj.latitude, 10);
-    lng2 = parseInt(eachObj.longitude, 10);
+    lat2 = parseFloat(eachObj.latitude);
+    lng2 = parseFloat(eachObj.longitude);
 
-    var calc = getDistance(lat1, lng1, lat2, lng2);
+    calc = getDistance(lat1, lng1, lat2, lng2);
 
     if (calc < smallestDistance) {
       smallestDistance = calc;
       insideArray = eachObj;
     }
   }
+  console.log(typeof calc, calc);
   return insideArray;
 };
 

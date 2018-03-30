@@ -7,13 +7,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-
+//Send static files
 app.use(express.static(__dirname + "/public"));
 
 app.get("/api/getTree", (req, res) => {
-  let lat = parseInt(req.query.lat, 10);
-  let lng = parseInt(req.query.lng, 10);
-
+  let lat = parseFloat(req.query.lat);
+  let lng = parseFloat(req.query.lng);
+  //pass JSONObj and geo location algo to calculate and return the nearest tree obj
   let result = compareTwoPoints(JSONObj, lat, lng);
   res.send(result);
 });
