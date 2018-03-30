@@ -1,4 +1,4 @@
-# Learn about the nearest tree in your location
+# Tree info!
 
 The city of New York is a wonderful place to roam and ponder. Once in a while, you meet a tree.
 
@@ -6,7 +6,6 @@ The city of New York is a wonderful place to roam and ponder. Once in a while, y
 
 ```
     git clone
-
 ```
 
 cd into folder
@@ -16,3 +15,7 @@ cd into folder
 
     npm run dev
 ```
+
+Go on localhost: 3000
+
+Type in your address or click on the 'get my location' button!
