@@ -23,3 +23,4 @@ The city of New York is a wonderful place to roam and ponder. Once in a while, y
 #### Things to improve:
 
 * Distance Algorithm
+* Refactor script.js
