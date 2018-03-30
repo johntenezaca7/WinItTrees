@@ -11,8 +11,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 
 app.get("/api/getTree", (req, res) => {
-  let lat = parseFloat(req.query.lat);
-  let lng = parseFloat(req.query.lng);
+  let lat = parseFloat(req.query.lat, 8);
+  let lng = parseFloat(req.query.lng, 8);
+
   //pass JSONObj and geo location algo to calculate and return the nearest tree obj
   let result = compareTwoPoints(JSONObj, lat, lng);
   res.send(result);

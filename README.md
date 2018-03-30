@@ -8,7 +8,7 @@ The city of New York is a wonderful place to roam and ponder. Once in a while, y
     git clone
 ```
 
-cd into folder
+#### cd into folder
 
 ```
     npm install
@@ -16,6 +16,10 @@ cd into folder
     npm run dev
 ```
 
-Go on localhost: 3000
+#### Go to localhost:3000
 
-Type in your address or click on the 'get my location' button!
+#### Type in your address or click on the 'get my location' button!
+
+#### Things to improve:
+
+* Distance Algorithm

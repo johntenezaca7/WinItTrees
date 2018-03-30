@@ -20,7 +20,6 @@ const compareTwoPoints = (arrayOfObj, lat1, lng1) => {
       insideArray = eachObj;
     }
   }
-  console.log(typeof calc, calc);
   return insideArray;
 };
 

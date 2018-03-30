@@ -22,9 +22,14 @@ function getLocation() {
         output.innerHTML = `<div> 
         <p>Details about Tree# ${details.tree_id}.</p> 
           <ul>
-            <li>${details.tree_id}</li>
-            <li>${details.spc_latin}</li>
-            <li>${details.health}</li>
+             <li>Birthday: ${details.created_at}</li>
+             <li>Status: ${details.status}</li>
+             <li>Health: ${details.health}</li>
+             <li>Guards: ${details.guards}</li>
+             <li>Address: ${details.address} ${details.postcode} 
+             ${details.zip_city}
+              ${details.borough}
+              </li>
           </ul>
         </div>`;
 
@@ -92,9 +97,14 @@ searchForm.addEventListener("submit", function(e) {
           output.innerHTML = `<div> 
           <p>Details about Tree# ${details.tree_id}.</p> 
             <ul>
-              <li>${details.tree_id}</li>
-              <li>${details.spc_latin}</li>
-              <li>${details.health}</li>
+               <li>Birthday: ${details.created_at}</li>
+               <li>Status: ${details.status}</li>
+               <li>Health: ${details.health}</li>
+               <li>Guards: ${details.guards}</li>
+               <li>Address: ${details.address} ${details.postcode} 
+               ${details.zip_city}
+                ${details.borough}
+                </li>
             </ul>
           </div>`;
 
