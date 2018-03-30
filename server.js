@@ -1,11 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const fs = require("fs");
-const csv = require("csvtojson");
-const obj = require("./trees.json");
-// console.log("OBJ", obj[0]);
+const JSONObj = require("./trees.json");
 const compareTwoPoints = require("./getDistance").compareTwoPoints;
-console.log(compareTwoPoints(obj));
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -13,11 +10,12 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + "/public"));
 
-app.get("/api/test", (req, res) => {
-  console.log(req.headers);
-  console.log("hitting the back end", res.query);
+app.get("/api/getTree", (req, res) => {
+  let lat = parseInt(req.query.lat, 10);
+  let lng = parseInt(req.query.lng, 10);
 
-  res.send("Hi");
+  let result = compareTwoPoints(JSONObj, lat, lng);
+  res.send(result);
 });
 
 app.listen(PORT, () => {
