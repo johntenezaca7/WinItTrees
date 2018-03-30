@@ -2,3 +2,47 @@ body {
   margin: 2%;
   font-family: "Roboto", sans-serif;
 }
+
+div.container {
+  width: 100%;
+  border: 0px solid gray;
+}
+
+header,
+footer {
+  padding: 1em;
+  color: white;
+  background-color: rgb(49, 153, 35);
+  clear: left;
+  text-align: center;
+  box-shadow: -2px 3px 5px rgba(77, 78, 79, 0.2);
+}
+
+footer {
+  background-color: rgb(114, 75, 2);
+}
+article {
+  margin-left: 2%;
+  padding: 1em;
+  overflow: hidden;
+  height: 400px;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 1.5s linear infinite; /* Safari */
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
